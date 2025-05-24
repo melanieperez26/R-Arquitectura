@@ -1,0 +1,121 @@
+/* Estilo base (tema claro) */
+body {
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group input,
+.input-group button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.theme-toggle {
+    margin-top: 20px;
+    padding: 8px 12px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 🌙 Tema oscuro */
+[data-theme="dark"] {
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+[data-theme="dark"] .container {
+    background: #2a2a2a;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] button {
+    background-color: #444;
+    color: #eee;
+    border: 1px solid #666;
+}
+
+[data-theme="dark"] .theme-toggle {
+    color: #eee;
+}
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: gray;
+}
+
+.task-item button {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+/* Agrega estos estilos al CSS */
+#assignEmail, #taskPriority {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .notifications-panel {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
+  
+  .notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 8px 0;
+    background: var(--card-light);
+    border-radius: 8px;
+    animation: slideIn 0.3s ease;
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  
+  .priority-tag {
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .priority-urgente { background: #ff4757; color: white; }
+  .priority-alta { background: #ffa502; color: white; }
+  .priority-normal { background: #2ed573; color: white; }

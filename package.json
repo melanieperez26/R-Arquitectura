@@ -1,0 +1,19 @@
+{
+  "name": "proyecto_sencillo",
+  "version": "1.0.0",
+  "description": "Proyecto básico en HTML, CSS y JavaScript que permite agregar y eliminar tareas.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pg": "^8.16.0",
+    "sqlite3": "^5.1.7"
+  }
+}

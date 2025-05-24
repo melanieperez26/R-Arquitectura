@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Tareas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: #1a1a1a;
+      color: #eee;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    .dark-mode .container {
+      background: #2b2b2b;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"] {
+      padding: 10px;
+      margin: 5px 5px 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      margin-top: 10px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #e3e3e3;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .dark-mode li {
+      background: #444;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .actions button {
+      margin-left: 5px;
+    }
+
+    .alert {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button onclick="toggleDarkMode()">🌓</button>
+    <h1>📌 Lista de Tareas</h1>
+    <div>
+      <input type="text" id="taskInput" placeholder="Nueva tarea..." />
+      <input type="date" id="taskDate" />
+      <input type="time" id="taskTime" />
+      <button onclick="addTask()">Agregar</button>
+    </div>
+    <p id="alertMsg" class="alert" style="display:none;">¡Tarea agregada!</p>
+    <ul id="taskList"></ul>
+    <audio id="alertSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
