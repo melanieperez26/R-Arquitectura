@@ -12,7 +12,7 @@ async function renderTasks() {
     li.className = task.completada ? "completed" : "";
 
     const text = document.createElement("span");
-    text.textContent = `${task.texto} (Fecha: ${task.fecha} ${task.hora})`; // Usa el nombre del campo de la base
+    text.textContent = `${task.texto} (Fecha: ${task.fecha} ${task.hora})`; 
     text.style.flexGrow = "1";
     
     const actions = document.createElement("div");
